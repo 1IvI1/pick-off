@@ -1,0 +1,120 @@
+<div class="day-chart-main">
+  <div class="day-chart-body">
+    <div class="day-chart-header">
+      <span class="day-chart-header-text"
+        >Lunch occupancy
+        <span class="day-chart-header-text-coloured">ZTower</span> at
+        <span class="day-chart-header-text-coloured"
+          >Thursday, 27 april</span
+        ></span
+      >
+      <mat-icon class="day-chart-header-icon" (click)="closeChart()">highlight_off</mat-icon>
+    </div>
+    <div class="day-chart-container">
+      <div class="day-chart-container-bar-vertical">
+        <div class="day-chart-container-bar-vertical-identifier">
+          <span class="day-chart-container-bar-vertical-identifier-percent">100%</span>
+          <div class="day-chart-container-bar-vertical-identifier-border"></div>
+        </div>
+        <div class="day-chart-container-bar-vertical-identifier">
+          <span class="day-chart-container-bar-vertical-identifier-percent">90%</span>
+          <div class="day-chart-container-bar-vertical-identifier-border"></div>
+        </div>
+        <div class="day-chart-container-bar-vertical-identifier">
+          <span class="day-chart-container-bar-vertical-identifier-percent">80%</span>
+          <div class="day-chart-container-bar-vertical-identifier-border"></div>
+        </div>
+        <div class="day-chart-container-bar-vertical-identifier">
+          <span class="day-chart-container-bar-vertical-identifier-percent">70%</span>
+          <div class="day-chart-container-bar-vertical-identifier-border"></div>
+        </div>
+        <div class="day-chart-container-bar-vertical-identifier">
+          <span class="day-chart-container-bar-vertical-identifier-percent">60%</span>
+          <div class="day-chart-container-bar-vertical-identifier-border"></div>
+        </div>
+        <div class="day-chart-container-bar-vertical-identifier">
+          <span class="day-chart-container-bar-vertical-identifier-percent">50%</span>
+          <div class="day-chart-container-bar-vertical-identifier-border"></div>
+        </div>
+        <div class="day-chart-container-bar-vertical-identifier">
+          <span class="day-chart-container-bar-vertical-identifier-percent">40%</span>
+          <div class="day-chart-container-bar-vertical-identifier-border"></div>
+        </div>
+        <div class="day-chart-container-bar-vertical-identifier">
+          <span class="day-chart-container-bar-vertical-identifier-percent">30%</span>
+          <div class="day-chart-container-bar-vertical-identifier-border"></div>
+        </div>
+        <div class="day-chart-container-bar-vertical-identifier">
+          <span class="day-chart-container-bar-vertical-identifier-percent">20%</span>
+          <div class="day-chart-container-bar-vertical-identifier-border"></div>
+        </div>
+        <div class="day-chart-container-bar-vertical-identifier">
+          <span class="day-chart-container-bar-vertical-identifier-percent">10%</span>
+          <div class="day-chart-container-bar-vertical-identifier-border"></div>
+        </div>
+        <div class="day-chart-container-bar-vertical-identifier">
+          <span class="day-chart-container-bar-vertical-identifier-percent">0%</span>
+          <div class="day-chart-container-bar-vertical-identifier-border"></div>
+        </div>
+      </div>
+      <div class="day-chart-container-bar-horizontal">
+        <div class="day-chart-container-bar-horizontal-identifier">
+          <div class="day-chart-container-bar-horizontal-identifier-border" [ngStyle]="{'height.%': daysMap['07:00']}"></div>
+            <span class="day-chart-container-bar-horizontal-identifier-percent">07:00</span>
+        </div>
+        <div class="day-chart-container-bar-horizontal-identifier">
+          <div class="day-chart-container-bar-horizontal-identifier-border" [ngStyle]="{'height.%': daysMap['08:00']}"></div>
+          <span class="day-chart-container-bar-horizontal-identifier-percent">08:00</span>
+        </div>
+        <div class="day-chart-container-bar-horizontal-identifier">
+          <div class="day-chart-container-bar-horizontal-identifier-border" [ngStyle]="{'height.%': daysMap['09:00']}"></div>
+          <span class="day-chart-container-bar-horizontal-identifier-percent">09:00</span>
+        </div>
+        <div class="day-chart-container-bar-horizontal-identifier">
+          <div class="day-chart-container-bar-horizontal-identifier-border" [ngStyle]="{'height.%': daysMap['10:00']}"></div>
+          <span class="day-chart-container-bar-horizontal-identifier-percent">10:00</span>
+        </div>
+        <div class="day-chart-container-bar-horizontal-identifier">
+          <div class="day-chart-container-bar-horizontal-identifier-border" [ngStyle]="{'height.%': daysMap['11:00']}"></div>
+          <span class="day-chart-container-bar-horizontal-identifier-percent">11:00</span>
+        </div>
+        <div class="day-chart-container-bar-horizontal-identifier">
+          <div class="day-chart-container-bar-horizontal-identifier-border" [ngStyle]="{'height.%': daysMap['12:00']}"></div>
+          <span class="day-chart-container-bar-horizontal-identifier-percent">12:00</span>
+        </div>
+        <div class="day-chart-container-bar-horizontal-identifier">
+          <div class="day-chart-container-bar-horizontal-identifier-border" [ngStyle]="{'height.%': daysMap['13:00']}"></div>
+          <span class="day-chart-container-bar-horizontal-identifier-percent">13:00</span>
+        </div>
+        <div class="day-chart-container-bar-horizontal-identifier">
+          <div class="day-chart-container-bar-horizontal-identifier-border" [ngStyle]="{'height.%': daysMap['14:00']}"></div>
+          <span class="day-chart-container-bar-horizontal-identifier-percent">14:00</span>
+        </div>
+        <div class="day-chart-container-bar-horizontal-identifier">
+          <div class="day-chart-container-bar-horizontal-identifier-border" [ngStyle]="{'height.%': daysMap['15:00']}"></div>
+          <span class="day-chart-container-bar-horizontal-identifier-percent">15:00</span>
+        </div>
+        <div class="day-chart-container-bar-horizontal-identifier">
+          <div class="day-chart-container-bar-horizontal-identifier-border" [ngStyle]="{'height.%': daysMap['16:00']}"></div>
+          <span class="day-chart-container-bar-horizontal-identifier-percent">16:00</span>
+        </div>
+        <div class="day-chart-container-bar-horizontal-identifier">
+          <div class="day-chart-container-bar-horizontal-identifier-border" [ngStyle]="{'height.%': daysMap['17:00']}"></div>
+          <span class="day-chart-container-bar-horizontal-identifier-percent">17:00</span>
+        </div>
+        <div class="day-chart-container-bar-horizontal-identifier">
+          <div class="day-chart-container-bar-horizontal-identifier-border" [ngStyle]="{'height.%': daysMap['18:00']}"></div>
+          <span class="day-chart-container-bar-horizontal-identifier-percent">18:00</span>
+        </div>
+        <div class="day-chart-container-bar-horizontal-identifier">
+          <div class="day-chart-container-bar-horizontal-identifier-border" [ngStyle]="{'height.%': daysMap['19:00']}"></div>
+          <span class="day-chart-container-bar-horizontal-identifier-percent">19:00</span>
+        </div>
+        <div class="day-chart-container-bar-horizontal-identifier">
+          <div class="day-chart-container-bar-horizontal-identifier-border" [ngStyle]="{'height.%': daysMap['20:00']}"></div>
+          <span class="day-chart-container-bar-horizontal-identifier-percent">20:00</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

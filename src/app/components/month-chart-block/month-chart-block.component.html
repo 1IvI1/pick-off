@@ -1,0 +1,10 @@
+<div class="day-chart-block-main">
+  <app-month-chart
+    (setDayChartOnOutput)="onDayClicked($event)"
+  ></app-month-chart>
+  <app-day-chart
+    (closeChartOutput)="onDayClicked($event)"
+    [data]="dayData"
+    *ngIf="showDailyReport && dayData"
+  ></app-day-chart>
+</div>
