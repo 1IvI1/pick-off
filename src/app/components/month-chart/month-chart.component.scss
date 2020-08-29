@@ -10,7 +10,7 @@
   }
 
   &-header {
-    width: 84%;
+    width: 90%;
     height: 10%;
     display: flex;
     justify-content: space-between;
@@ -70,7 +70,7 @@
         position: relative;
 
         &-legend {
-          width: 96%;
+          width: 99.5%;
           height: 10%;
           display: flex;
           justify-content: space-between;
@@ -237,14 +237,6 @@
   .month-chart-container-bar-right-data-bar-block {
     width: 35px;
     height: 35px;
-  }
-}
-
-@media screen and (max-height: 650px) {
-
-  .month-chart-container-bar-right-data-bar-block {
-    // width: 33px !important;
-    // height: 33px !important;
   }
 }
 

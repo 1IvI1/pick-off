@@ -6,27 +6,12 @@ import {
   Output,
   Inject
 } from '@angular/core';
-import { IP, PORT } from '../month-chart-block/month-chart-block.component';
 import { Subject, Subscription } from 'rxjs';
 import { DOCUMENT } from '@angular/common';
 import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
 import { RequestsService } from '../../services/requests.service';
 import axios from 'axios';
-import { colorsArray } from './exports';
-
-interface MonthData {
-  MON: MonthDayData;
-  TUE: MonthDayData;
-  WED: MonthDayData;
-  THU: MonthDayData;
-  FRI: MonthDayData;
-  SAT: MonthDayData;
-  SUN: MonthDayData;
-}
-
-export interface MonthDayData {
-  week: Array<{ date: string; value: number }>;
-}
+import { colorsArray, MonthDayData } from './exports';
 
 @Component({
   selector: 'app-month-chart',
@@ -65,12 +50,8 @@ export class MonthChartComponent implements OnInit, OnDestroy {
       }
     }
     this.displayData = this.monthData.slice(this.start, this.end + 1);
-    console.log(this.displayData);
   }
 
-  setScale() {
-    // const [width, height] = 
-  }
 
   selectMaxChartValue(inputDataArr: Array<any>, data: number): number {
     const max = inputDataArr.reduce(
@@ -116,36 +97,11 @@ export class MonthChartComponent implements OnInit, OnDestroy {
   private getWeeksDataSubsription: Subscription;
 
   ngOnInit(): void {
-    this.setScale()
-    /**FIXME put request on service | use HttpClient*/
-    /**
-     * service.serviceMethod(...).pipe(takeUntil(this.destroy$)).subscribe(res = > LOGIC)
-     * 
-     *   private readonly destroy$: Subject<boolean> = new Subject<boolean>();
-          ngOnDestroy(): void {
-            this.destroy$.next();
-            this.destroy$.unsubscribe();
-          }
-     * https://rxjs-dev.firebaseapp.com/api
-     * return of([...]) || instead of express.js
-     * 
-     */
-
-    /**
-     * TODO read about tests | create tests on SenseIT
-     */
-    // axios
-    //   .get(`${IP + PORT}/dashboard2?startDate=2020-06-22&weeks=1`)
-    //   .then(response => {
-    //     console.log(response.data, 'data from request month');
-    //     this.monthData = response.data;
-    //   });
     this.getWeeksDataSubsription = this.requests
       .getWeeksData()
       .subscribe(response => {
         this.monthData = response;
         this.displayData = response.slice(this.start, this.end + 1);
-        console.log(response);
       });
   }
 

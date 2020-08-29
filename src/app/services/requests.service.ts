@@ -1,12 +1,7 @@
-import {
-  IP,
-  PORT
-} from '../components/month-chart-block/month-chart-block.component';
+import { IP, InputData, MonthDayData, PORT } from '../components/month-chart/exports';
 
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { InputData } from '../components/day-chart/day-chart.component';
-import { MonthDayData } from '../components/month-chart/month-chart.component';
 import { Observable } from 'rxjs';
 
 @Injectable({

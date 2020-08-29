@@ -10,3 +10,28 @@ export const colorsArray = [
   {percents: '80-90%', color: "#FF4D4F"},
   {percents: '90-100%', color: "#CF1322"}
 ];
+
+export const IP = 'http://localhost:';
+export const PORT = '3001';
+export interface ChartSetter {
+  [key: string]: number;
+}
+
+export interface InputData {
+  value: number;
+  time: string;
+}
+
+export interface MonthData {
+  MON: MonthDayData;
+  TUE: MonthDayData;
+  WED: MonthDayData;
+  THU: MonthDayData;
+  FRI: MonthDayData;
+  SAT: MonthDayData;
+  SUN: MonthDayData;
+}
+
+export interface MonthDayData {
+  week: Array<{ date: string; value: number }>;
+}

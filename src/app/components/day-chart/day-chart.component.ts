@@ -1,30 +1,5 @@
+import { ChartSetter, InputData } from '../month-chart/exports';
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-
-const ChartSetterKeys: Array<string> = [
-  '07:00',
-  '08:00',
-  '09:00',
-  '10:00',
-  '11:00',
-  '12:00',
-  '13:00',
-  '14:00',
-  '15:00',
-  '16:00',
-  '17:00',
-  '18:00',
-  '19:00',
-  '20:00'
-];
-
-interface ChartSetter {
-  [key: string]: number;
-}
-
-export interface InputData {
-  value: number;
-  time: string;
-}
 
 @Component({
   selector: 'app-day-chart',
@@ -32,7 +7,6 @@ export interface InputData {
   styleUrls: ['./day-chart.component.scss']
 })
 export class DayChartComponent implements OnInit {
-  /** FIXME: use new Map() */
   daysMap: ChartSetter = {
     '07:00': 0,
     '08:00': 0,
@@ -64,7 +38,6 @@ export class DayChartComponent implements OnInit {
       -1
     );
   }
-  /**TODO cheange all values types */
   setChartValues(inputDataArr: Array<InputData>): void {
     if (!Array.isArray(inputDataArr)) {
       return;
@@ -80,7 +53,6 @@ export class DayChartComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    console.log("From daily: ", this.data)
     this.setChartValues(this.data);
   }
 }
